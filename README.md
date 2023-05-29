@@ -27,6 +27,7 @@ export default defineConfig({
 });
 ```
 See [here](https://start.solidjs.com/api/vite) for more info on configuring Vite and SolidStart adapters.
+
 4. Run dev server to verify your app is working.
 ```bash
 bun run dev
