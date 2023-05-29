@@ -15,7 +15,7 @@ This is basically a fork of the SolidStart Deno adapter, which will likely soon 
 bun x create-solid@latest
 ```
 2. Link this adapter as a local dependency in your project ([bun recommended](https://bun.sh/docs/cli/install#local-packages-bun-link))
-3. Initialize and use the imported adapter in the Vite x SolidStart plugin config:
+3. Initialize and use the imported adapter in the SolidStart Vite plugin config:
 ```ts
 import bun from "solid-start-bun";
 
