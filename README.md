@@ -12,6 +12,8 @@ This is basically a fork of the SolidStart Deno adapter, which will likely soon 
 0. [Install Bun](https://bun.sh/docs/installation)
 1. Initialize app in **empty directory** with:
 ```bash
+mkdir my-project
+cd my-project
 bun x create-solid@latest
 ```
 2. Link this adapter as a local dependency in your project ([bun recommended](https://bun.sh/docs/cli/install#local-packages-bun-link))
