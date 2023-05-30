@@ -40,7 +40,7 @@ bun run dev
 ```
 And you're good to go!
 
-# Build
+## Build
 ```bash
 bun run build
 ```
@@ -49,3 +49,6 @@ bun run build
 ```bash
 bun run start
 ```
+
+### License
+MIT license found at [SolidStart main repo](https://github.com/solidjs/solid-start)
