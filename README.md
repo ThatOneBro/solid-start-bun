@@ -18,8 +18,8 @@ mkdir my-project
 cd my-project
 bun x create-solid@latest
 ```
-1. Link this adapter as a local dependency in your project ([bun recommended](https://bun.sh/docs/cli/install#local-packages-bun-link))
-2. Initialize and use the imported adapter in the SolidStart Vite plugin config:
+3. Link this adapter as a local dependency in your project ([bun recommended](https://bun.sh/docs/cli/install#local-packages-bun-link))
+4. Initialize and use the imported adapter in the SolidStart Vite plugin config:
 ```ts
 // vite.config.ts
 import bun from "solid-start-bun";
