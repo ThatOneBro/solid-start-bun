@@ -10,7 +10,7 @@ This is basically a fork of the SolidStart Deno adapter, which will likely soon 
 
 ## Getting Started
 0. [Install Bun](https://bun.sh/docs/installation)
-1. Initialize app in **empty directory** with:
+1. Initialize app in **empty directory** (must be empty) with:
 ```bash
 mkdir my-project
 cd my-project
