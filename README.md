@@ -9,15 +9,17 @@ This is basically a fork of the SolidStart Deno adapter, which will likely soon 
 **NOTE: HIGHLY EXPERIMENTAL AND UNTESTED. USE AT YOUR OWN RISK**
 
 ## Getting Started
-0. [Install Bun](https://bun.sh/docs/installation)
-1. Initialize app in **empty directory** (must be empty) with:
+*Prereqs: [Install Bun](https://bun.sh/docs/installation) and clone this repo*
+
+1. Run `bun install` inside this repo
+2. Initialize a new Solid app in **empty directory** (must be empty) with:
 ```bash
 mkdir my-project
 cd my-project
 bun x create-solid@latest
 ```
-2. Link this adapter as a local dependency in your project ([bun recommended](https://bun.sh/docs/cli/install#local-packages-bun-link))
-3. Initialize and use the imported adapter in the SolidStart Vite plugin config:
+1. Link this adapter as a local dependency in your project ([bun recommended](https://bun.sh/docs/cli/install#local-packages-bun-link))
+2. Initialize and use the imported adapter in the SolidStart Vite plugin config:
 ```ts
 // vite.config.ts
 import bun from "solid-start-bun";
@@ -31,12 +33,12 @@ export default defineConfig({
 ```
 See [here](https://start.solidjs.com/api/vite) for more info on configuring Vite and SolidStart adapters.
 
-4. Run `bun install`
-5. Run dev server to verify your app is working.
+5. Run `bun install` in `my-project`
+6. Run dev server to verify your app is working
 ```bash
 bun run dev
 ```
-and you're good to go!
+And you're good to go!
 
 # Build
 ```bash
