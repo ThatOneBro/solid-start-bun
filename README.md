@@ -51,4 +51,4 @@ bun run start
 ```
 
 ### License
-MIT license found at [SolidStart main repo](https://github.com/solidjs/solid-start)
+MIT license found at [SolidStart main repo](https://github.com/solidjs/solid-start).
