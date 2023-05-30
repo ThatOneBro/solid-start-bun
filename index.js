@@ -13,7 +13,7 @@ export default function () {
       process.env.PORT = port;
       const proc = spawn("bun", ["server.js"], {
         cwd: join(process.cwd(), "dist"),
-        env: process.env
+        env: process.env,
       });
       proc.stdout.pipe(process.stdout);
       proc.stderr.pipe(process.stderr);
@@ -33,23 +33,27 @@ export default function () {
         await builder.server(join(config.root, ".solid", "server"));
       }
 
-      copyFileSync(join(__dirname, "entry.js"), join(config.root, ".solid", "server", "server.js"));
+      copyFileSync(
+        join(__dirname, "entry.js"),
+        join(config.root, ".solid", "server", "server.js")
+      );
       const bundle = await rollup({
         input: join(config.root, ".solid", "server", "server.js"),
         plugins: [
           json(),
           nodeResolve({
             preferBuiltins: true,
-            exportConditions: ["deno", "solid"]
+            exportConditions: ["deno", "solid"],
           }),
-          common({ strictRequires: true, ...config.build.commonjsOptions })
-        ]
+          common({ strictRequires: true, ...config.build.commonjsOptions }),
+        ],
+        external: ["node:fs"],
       });
       // or write the bundle to disk
       await bundle.write({ format: "esm", dir: join(config.root, "dist") });
 
       // closes the bundle
       await bundle.close();
-    }
+    },
   };
 }
