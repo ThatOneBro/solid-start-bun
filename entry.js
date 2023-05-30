@@ -8,7 +8,7 @@ const fs = bunFs();
 serve({
   fetch: async request => {
     const { pathname } = new URL(request.url);
-    process.env.NODE_ENV !== "production" || console.log(pathname);
+    process.env.NODE_ENV !== "production" && console.log(pathname);
 
     // This is how the server works:
     // 1. A request comes in for a specific asset.
@@ -38,7 +38,7 @@ serve({
       env: {
         manifest,
         getStaticHTML: async path => {
-          process.env.NODE_ENV !== "production" || console.log(path);
+          process.env.NODE_ENV !== "production" && console.log(path);
           let text = fs.readFileSync(`./public${path}.html`);
           return new Response(text, {
             headers: {
