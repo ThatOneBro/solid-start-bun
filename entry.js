@@ -16,7 +16,7 @@ serve({
     // 3. We send the asset back to the client.
 
     try {
-      const file = fs.readFile(`./public${pathname}`);
+      const file = fs.readFileSync(`./public${pathname}`);
       const isAsset = pathname.startsWith("/assets/");
 
       // Respond to the request with the style.css file.
